@@ -41,7 +41,7 @@ class HAProxyStats(object):
 				raise TimeoutException()
 	
 			for s in r:
-				if (x is client):
+				if (s is client):
 					buffer = buffer + client.recv(4096).decode('utf-8')
 					running = (len(buffer)==0)
 										
