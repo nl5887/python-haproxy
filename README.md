@@ -12,7 +12,7 @@ There are a few different ways you can install pyechonest:
 based on [http://www.gefira.pl/blog/2011/07/01/accessing-haproxy-statistics-with-python/] (http://www.gefira.pl/blog/2011/07/01/accessing-haproxy-statistics-with-python)
 
 
-## Example:
+## Examples
 
 ```python
 from haproxy import haproxy
@@ -21,7 +21,7 @@ stats.execute('show info')
 [u'Name: HAProxy', u'Version: 1.4.18', u'Release_date: 2011/09/16', u'Nbproc: 1', u'Process_num: 1', u'Pid: 19234', u'Uptime: 0d 6h18m11s', u'Uptime_sec: 22691', u'Memmax_MB: 0', u'Ulimit-n: 8210', u'Maxsock: 8210', u'Maxconn: 4096', u'Maxpipes: 0', u'CurrConns: 1', u'PipesUsed: 0', u'PipesFree: 0', u'Tasks: 7', u'Run_queue: 1', u'node: ip-10-0-0-45', u'description: ', u'']
 ```
 
-## Options:
+## Options
 ```
 clear counters : clear max statistics counters (add 'all' for all counters)
 help           : this message
