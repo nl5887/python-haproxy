@@ -33,6 +33,7 @@ class HAProxyStats(object):
 
 		client.send(command + "\n")
 
+		lines = []
 		running = True
 		while(running):
 			r, w, e = select.select([client,],[],[], timeout)
@@ -45,11 +46,9 @@ class HAProxyStats(object):
 					buffer = buffer + client.recv(4096).decode('utf-8')
 					running = (len(buffer)==0)
 										
-					lines=buffer.split('\n')
+					lines.extend(buffer.split('\n'))
 					buffer = lines.pop()
-					for line in lines:
-						print (line)
 		
 		client.close()
-		return (buffer)
+		return (lines)
 
